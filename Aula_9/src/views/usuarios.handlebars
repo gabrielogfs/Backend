@@ -1,0 +1,21 @@
+<div>
+    <h1>Olá {{usuario.name}}! Seja bem vindo(a)!</h1>
+
+    {{#if isAdmin}}
+        <h2>Lista de Alimentos Disponíveis</h2>
+        {{#each food}}
+            <ul>
+                <li>Alimento: {{this.name}}</li>
+                <li>Preço: {{this.price}}</li>
+            </ul>
+        {{/each}}
+    {{else}}
+        <ul>
+            <li>Nome: {{usuario.name}}</li>
+            <li>Sobrenome: {{usuario.lastname}}</li>
+            <li>Idade: {{usuario.age}} anos</li>
+            <li>E-mail: {{usuario.email}}</li>
+            <li>Contato: {{usuario.phonenumber}}</li>
+        </ul>
+    {{/if}}
+</div>
